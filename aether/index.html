@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AETHER 以太 — 越过已知边界</title>
+<meta name="description" content="AETHER 以太，一场关于深空、时间与未知的交互式科幻旅程。">
+<meta name="theme-color" content="#070b10">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b10'/%3E%3Cpath d='M7 24 16 6 25 24M11 19h10' fill='none' stroke='%23a9edfa' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="motion.css">
+</head>
+<body>
+<div class="scene" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div>
+<header><a class="brand" href="#" aria-label="AETHER 以太首页"><span class="mark">Λ</span><span>AETHER<small>以 太</small></span></a><nav aria-label="主导航"><a href="#explore" class="nav-active">探索计划</a><button id="story-open">关于以太 <span>↗</span></button></nav><button class="mode" id="mode" aria-pressed="false"><span class="mode-icon">⛶</span> <span id="mode-label">沉浸模式</span></button></header>
+<main id="explore">
+<div class="eyebrow"><span class="line"></span> THE NEXT FRONTIER <span class="edition">/ 先行者计划 01</span></div>
+<section class="hero" aria-labelledby="headline"><div class="copy"><p class="chapter" id="chapter">CHAPTER 01 — THE ARRIVAL</p><h1 id="headline">越过已知<span>边界之外。</span></h1><p class="intro" id="intro">当最后一束地球的光消失在身后，<br>我们开始，重新想象远方。</p><button class="primary" id="journey">开启探索 <span>↗</span></button><span class="journey-note">一段来自未来的航行记录</span></div><div class="annotation"><span class="cross">+</span><div>AE—01 / 轨道之门<small>BEYOND THE VISIBLE HORIZON</small></div></div><div class="vertical">AETHER EXPLORATION PROGRAM · 2186</div></section>
+<section class="exploration" aria-label="探索章节"><div class="section-label"><span>航行日志</span><small>SELECT A CHAPTER</small></div><div class="tabs" role="tablist" aria-label="选择航行章节"><button role="tab" id="tab-0" aria-controls="log" aria-selected="true" data-index="0"><span class="number">01</span><span>抵达未知<small>THE ARRIVAL</small></span><span class="tab-arrow">↗</span></button><button role="tab" id="tab-1" aria-controls="log" aria-selected="false" data-index="1" tabindex="-1"><span class="number">02</span><span>穿越静默<small>THE SILENCE</small></span><span class="tab-arrow">↗</span></button><button role="tab" id="tab-2" aria-controls="log" aria-selected="false" data-index="2" tabindex="-1"><span class="number">03</span><span>重构远方<small>THE BEYOND</small></span><span class="tab-arrow">↗</span></button></div></section>
+<div id="log" role="tabpanel" aria-labelledby="tab-0" aria-live="polite"><span class="log-index">LOG 001</span><p id="log-text">星门近在眼前。我们减慢航速，让未知先一步靠近。</p><span class="coordinates" id="coordinates">SECTOR 07 / ORBITAL GATE</span></div>
+</main>
+<footer><span>© 2186 AETHER INITIATIVE</span><span>献给每一个仰望星空的人</span><span>科幻概念体验 <i>✦</i></span></footer>
+<dialog id="about"><button class="close" id="story-close" aria-label="关闭介绍">×</button><p class="chapter">THE AETHER INITIATIVE</p><h2>好奇心，<br>是我们的引力。</h2><p>公元 2186 年，一支探索队离开熟悉的星系，驶向无人抵达的边界。这是他们的航行记录，也是一次关于未知的想象。</p><p class="fine">AETHER 以太是一个虚构的科幻概念体验。所有航行地点与记录均为艺术创作。</p><button class="primary" id="story-go">继续航行 <span>↗</span></button></dialog>
+<script src="app.js"></script>
+<script src="motion.js"></script>
+</body></html>

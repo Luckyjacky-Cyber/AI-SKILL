@@ -1,0 +1,20 @@
+/* Slow environmental motion; controls stay fixed and easy to target. */
+.scene{transform:translate3d(var(--drift-x,0px),var(--drift-y,0px),0) scale(1.07);transition:filter 1.4s,transform 1.4s;will-change:transform}
+body.immersive .scene{transform:translate3d(var(--drift-x,0px),var(--drift-y,0px),0) scale(1.12)}
+.scene::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 73% 48%,#94ddf225,transparent 43%);mix-blend-mode:screen;animation:nebula-breathe 9s ease-in-out infinite alternate;pointer-events:none}
+.starfield{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.motion-toggle{background:transparent;border:0;border-bottom:1px solid #7a9daa66;padding:9px 0;font-size:12px;color:#a8c5d0;white-space:nowrap;margin-left:-22px}
+.motion-toggle:hover{color:#e6faff;border-color:#c8f0f8}.motion-toggle:disabled{opacity:.6;cursor:default}
+.primary{position:relative;overflow:hidden;isolation:isolate}.primary::after{content:'';position:absolute;inset:-60% -80%;background:linear-gradient(105deg,transparent 42%,#ffffff80 50%,transparent 58%);transform:translateX(-65%);animation:button-sheen 7s ease-in-out infinite;pointer-events:none}
+.tabs button{transition:background .3s,box-shadow .3s}.tabs button:hover{box-shadow:inset 0 0 28px #b8ecf709}.tabs button[aria-selected=true]:before{transform-origin:left;animation:chapter-line .65s cubic-bezier(.2,.7,.2,1) both}
+.annotation .cross{display:inline-block;animation:beacon-pulse 4s ease-in-out infinite}.copy{animation:arrival 1.2s cubic-bezier(.2,.7,.2,1) both}.eyebrow{animation:arrival .9s .1s both}.exploration{animation:arrival 1s .25s both}
+body.motion-paused *,body.motion-paused *::before,body.motion-paused *::after,body.motion-hidden *,body.motion-hidden *::before,body.motion-hidden *::after{animation-play-state:paused!important}
+body.motion-paused .copy,body.motion-paused .eyebrow,body.motion-paused .exploration{animation:none!important}body.motion-paused .scene{will-change:auto}
+@keyframes nebula-breathe{from{opacity:.25;transform:scale(1)}to{opacity:.8;transform:scale(1.05)}}
+@keyframes button-sheen{0%,65%{transform:translateX(-65%)}90%,100%{transform:translateX(65%)}}
+@keyframes beacon-pulse{0%,100%{opacity:.45;text-shadow:0 0 0 transparent}50%{opacity:1;text-shadow:0 0 14px #b8ecf7}}
+@keyframes chapter-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes arrival{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+@media(max-width:850px){header{gap:22px}.motion-toggle{margin-left:0}}
+@media(max-width:520px){header{position:relative;gap:12px}.motion-toggle{position:absolute;right:0;top:99px;font-size:11px;padding:4px 0;z-index:2}.eyebrow{padding-right:62px}.eyebrow .edition{display:none}}
+@media(prefers-reduced-motion:reduce){.scene{will-change:auto}.scene::after,.primary::after,.starfield{display:none}}

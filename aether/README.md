@@ -5,7 +5,7 @@
 ## 运行
 
 直接打开 `index.html`，或使用任意静态文件服务器运行本目录。无需安装依赖或构建。
-https://luckyjacky-cyber.github.io/AI-SKILL/aether/?v=4#
+https://luckyjacky-cyber.github.io/AI-page/aether/?v=4#
 
 ## 操作
 

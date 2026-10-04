@@ -6,11 +6,18 @@
 <meta name="description" content="AETHER 以太，一场关于深空、时间与未知的交互式科幻旅程。">
 <meta name="theme-color" content="#070b10">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b10'/%3E%3Cpath d='M7 24 16 6 25 24M11 19h10' fill='none' stroke='%23a9edfa' stroke-width='2'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="motion.css">
+<link rel="preload" as="image" href="gate.png">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="motion.css?v=3">
 </head>
-<body>
-<div class="scene" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div>
+<body data-chapter="0">
+<div class="scene" aria-hidden="true">
+  <div class="chapter-scene arrival-scene" data-scene="0">
+    <div class="gate-position"><div class="gate-float"><div class="gate-perspective"><img class="gate-rotor" src="gate.png" alt="" width="1024" height="1024" fetchpriority="high"><div class="gate-light"></div></div></div></div>
+  </div>
+  <div class="chapter-scene silence-scene" data-scene="1"><img class="scene-art" src="silence.png" alt="" width="1536" height="1024" decoding="async"></div>
+  <div class="chapter-scene beyond-scene" data-scene="2"><img class="scene-art" src="beyond.png" alt="" width="1536" height="1024" decoding="async"></div>
+</div><div class="shade" aria-hidden="true"></div>
 <header><a class="brand" href="#" aria-label="AETHER 以太首页"><span class="mark">Λ</span><span>AETHER<small>以 太</small></span></a><nav aria-label="主导航"><a href="#explore" class="nav-active">探索计划</a><button id="story-open">关于以太 <span>↗</span></button></nav><button class="mode" id="mode" aria-pressed="false"><span class="mode-icon">⛶</span> <span id="mode-label">沉浸模式</span></button></header>
 <main id="explore">
 <div class="eyebrow"><span class="line"></span> THE NEXT FRONTIER <span class="edition">/ 先行者计划 01</span></div>
@@ -20,6 +27,6 @@
 </main>
 <footer><span>© 2186 AETHER INITIATIVE</span><span>献给每一个仰望星空的人</span><span>科幻概念体验 <i>✦</i></span></footer>
 <dialog id="about"><button class="close" id="story-close" aria-label="关闭介绍">×</button><p class="chapter">THE AETHER INITIATIVE</p><h2>好奇心，<br>是我们的引力。</h2><p>公元 2186 年，一支探索队离开熟悉的星系，驶向无人抵达的边界。这是他们的航行记录，也是一次关于未知的想象。</p><p class="fine">AETHER 以太是一个虚构的科幻概念体验。所有航行地点与记录均为艺术创作。</p><button class="primary" id="story-go">继续航行 <span>↗</span></button></dialog>
-<script src="app.js"></script>
-<script src="motion.js"></script>
+<script src="app.js?v=3"></script>
+<script src="motion.js?v=3"></script>
 </body></html>

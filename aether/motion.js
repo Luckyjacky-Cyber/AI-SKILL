@@ -15,6 +15,8 @@
   let width = 0, height = 0, stars = [];
   const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
   const animations = new Set();
+  const palettes = ['184,231,250', '209,190,255', '255,220,176'];
+  let chapter = Number(document.body.dataset.chapter || 0);
   const running = () => !paused && !reduced.matches && !document.hidden;
 
   function resize() {
@@ -50,10 +52,10 @@
         const x = star.x - pointer.x * star.z * 10;
         const y = star.y - pointer.y * star.z * 8;
         const alpha = (.2 + star.z * .4) * (.7 + .3 * Math.sin(elapsed * .7 + star.phase));
-        ctx.fillStyle = `rgba(184,231,250,${alpha})`;
+        ctx.fillStyle = `rgba(${palettes[chapter]},${alpha})`;
         ctx.beginPath(); ctx.arc(x, y, .45 + star.z * .8, 0, Math.PI * 2); ctx.fill();
         if (burst > .1) {
-          ctx.strokeStyle = `rgba(166,224,249,${alpha * burst * .45})`;
+          ctx.strokeStyle = `rgba(${palettes[chapter]},${alpha * burst * .45})`;
           ctx.lineWidth = .7; ctx.beginPath(); ctx.moveTo(x, y);
           ctx.lineTo(x + burst * star.z * 30, y - burst * star.z * 6); ctx.stroke();
         }
@@ -95,6 +97,9 @@
   }, { passive: true });
   document.documentElement.addEventListener('pointerleave', () => { pointer.tx = pointer.ty = 0; });
   new MutationObserver(() => {
+    const next = Number(document.body.dataset.chapter || 0);
+    if (next === chapter) return;
+    chapter = next;
     if (!running()) return;
     burst = 1;
     for (const animation of animations) animation.cancel();

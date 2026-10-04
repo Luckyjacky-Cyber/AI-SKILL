@@ -1,2 +1,2 @@
-# AI-SKILL
-跑ai用
+# AI-page
+分享一些自己做的网页
